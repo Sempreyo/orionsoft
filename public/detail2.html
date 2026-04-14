@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orionsoft">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
+    <title>Orionsoft | Detail</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="service">
+        <div class="service__gradient"></div>
+        <div class="service__poster">
+          <picture>
+            <source srcset="./images/poster2.webp 1x, ./images/poster2@2x.webp 2x" type="image/webp">
+            <source srcset="./images/poster2.webp 1x, ./images/poster2@2x.webp 2x" type="image/webp"><img class="service__poster-image" src="./images/poster2.jpg" srcset="./images/poster2.jpg 1x, ./images/poster2@2x.jpg 2x" alt="">
+          </picture>
+        </div>
+        <div class="container service__container">
+          <div class="service__content"><a class="button button--gray service__button" href="#"><span>К афише</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-left"></use>
+              </svg></a>
+            <div class="service__rating"><span>10,0</span><span>Топ-5</span></div>
+            <h2 class="title service__title">Оптимизируй меня, если сможешь</h2>
+            <div class="service__description">
+              От ИТ-директора все время ускользают ресурсы инфраструктуры, которые он может использовать более эффективно. Чтобы поймать
+              их и задейство-вать на полную мощность, ему придется применить лучшие инструменты управления, мониторинга и аналитики.
+              Какое ПО ему в этом поможет?
+            </div>
+            <div class="service__roles-label">В главных ролях:</div>
+            <div class="service__roles">
+              <div class="role">
+                <svg class="role__title" width="45" height="19">
+                  <use xlink:href="./images/sprite.svg#zvirt-dcmanager"></use>
+                </svg><span class="role__note">(Централизованное управление виртуализацией)</span>
+              </div>
+              <div class="role">
+                <svg class="role__title" width="45" height="18">
+                  <use xlink:href="./images/sprite.svg#zvirt-metrics"></use>
+                </svg><span class="role__note">(Аналитика и мониторинг)</span>
+              </div>
+              <div class="role">
+                <svg class="role__title" width="80" height="10">
+                  <use xlink:href="./images/sprite.svg#cloudlink"></use>
+                </svg><span class="role__note">(CMP-платформа)</span>
+              </div>
+            </div>
+            <div class="service__carousel carousel">
+              <div class="carousel__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="carousel__slide swiper-slide">
+                    <h2 class="title carousel__title">Материалы о фильме</h2>
+                    <div class="carousel__spoiler">Спойлер</div>
+                    <div class="carousel__text">
+                      Компания внедрила платформу для управления инфраструктурой Cloudlink от Orion soft. Нагрузка на системы теперь
+                      прогнозируемая, а бизнес может планировать покупку только необходимого оборудования. Все неиспользуемые ресурсы были пойманы!
+                    </div>
+                  </div>
+                  <div class="carousel__slide swiper-slide">
+                    <h2 class="title carousel__title">Материалы о фильме</h2>
+                    <div class="carousel__spoiler">Отзыв крупной компании:</div>
+                    <div class="carousel__text">
+                      «С помощью CMP-платформы Cloudlink мы повысили утилизацию <span>CPU с 22% до 60%</span>. В перспективе это поможет
+                      нам сэкономить более 100 млн руб. в год».
+                    </div>
+                  </div>
+                  <div class="carousel__slide swiper-slide">
+                    <h2 class="title carousel__title">Материалы о фильме</h2>
+                    <div class="carousel__spoiler">Отзыв крупной компании:</div>
+                    <div class="carousel__text">
+                      «После внедрения zVirt Metrics и DC Manager мы обнаружили 38% свободных мощностей и не закупили лишних
+                      серверов — <span>сэкономили 160 млн руб.</span>».
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel__pagination swiper-pagination"></div>
+              </div>
+              <div class="carousel__nav swiper-nav">
+                <div class="swiper-btn-prev">
+                  <svg width="14" height="24">
+                    <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-btn-next">
+                  <svg width="14" height="24">
+                    <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="#"><span>Предыдущий фильм</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="#"><span>Следующий фильм</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="js/main.min.js" defer></script>
+</html>

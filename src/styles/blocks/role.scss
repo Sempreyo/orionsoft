@@ -1,0 +1,15 @@
+.role {
+	display: flex;
+	align-items: flex-end;
+	gap: 8px;
+
+	&__title {
+		font-family: $secondFont;
+	}
+
+	&__note {
+		color: rgba($color-text, 0.4);
+		font-size: 12px;
+		line-height: 0.8;
+	}
+}

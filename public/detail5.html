@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orionsoft">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
+    <title>Orionsoft | Detail</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="service">
+        <div class="service__gradient"></div>
+        <div class="service__poster">
+          <picture>
+            <source srcset="./images/poster5.webp 1x, ./images/poster5@2x.webp 2x" type="image/webp">
+            <source srcset="./images/poster5.webp 1x, ./images/poster5@2x.webp 2x" type="image/webp"><img class="service__poster-image" src="./images/poster5.jpg" srcset="./images/poster5.jpg 1x, ./images/poster5@2x.jpg 2x" alt="">
+          </picture>
+        </div>
+        <div class="container service__container">
+          <div class="service__content"><a class="button button--gray service__button" href="#"><span>К афише</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-left"></use>
+              </svg></a>
+            <div class="service__rating"><span>10,0</span><span>Топ-5</span></div>
+            <h2 class="title service__title">Остров виртуальных рабочих мест <br> Организация виртуальных рабочих мест</h2>
+            <div class="service__description">
+              Сотрудник крупной компании отправляется в командировку на удаленный остров в северных морях. Отсутствие стабильной
+              связи и большое количество задач чуть не сводит его с ума. Компании срочно нужно решение, для организации удаленной
+              работы, чтобы не потерять сотрудника и не увеличить нагрузку на инфраструктуру.
+            </div>
+            <div class="service__roles-label">В главных ролях:</div>
+            <div class="service__roles">
+              <div class="role">
+                <svg class="role__title" width="45" height="10">
+                  <use xlink:href="./images/sprite.svg#zvirt"></use>
+                </svg><span class="role__note">(Виртуализация)</span>
+              </div>
+              <div class="role">
+                <svg class="role__title" width="56" height="10">
+                  <use xlink:href="./images/sprite.svg#termit"></use>
+                </svg><span class="role__note">(виртуальные рабочие столы (VDI))</span>
+              </div>
+            </div>
+            <div class="service__carousel carousel">
+              <div class="carousel__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="carousel__slide swiper-slide">
+                    <h2 class="title carousel__title">Материалы о фильме</h2>
+                    <div class="carousel__spoiler">Спойлер</div>
+                    <div class="carousel__text">
+                      Компания внедряет VDI Termit на базе виртуализации zVirt. Решение помогает сотруднику решить все нужные задачи
+                      в корпоративных системах прямо с острова и вернуться домой, сохранив рассудок
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel__pagination swiper-pagination"></div>
+              </div>
+              <div class="carousel__nav swiper-nav">
+                <div class="swiper-btn-prev">
+                  <svg width="14" height="24">
+                    <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-btn-next">
+                  <svg width="14" height="24">
+                    <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="#"><span>Предыдущий фильм</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="#"><span>Следующий фильм</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="js/main.min.js" defer></script>
+</html>

@@ -1,0 +1,53 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Orionsoft | Detail'
+		};
+
+block main
+	section.service
+		.service__gradient
+		.service__poster
+			+picture('poster3', 'jpg', 'service__poster-image', '')
+		.container.service__container
+			.service__content
+				+button('К афише', 'button--gray service__button', '#', 'arrow-left')
+				.service__rating
+					span 10,0
+					span Топ-5
+				+title('Выживший с КИИ <br> Защищенная инфраструктура под КИИ', 'service__title')
+				.service__description.
+					Число атак на инфраструктуру российских компаний постоянно растет. Злоумышленники постоянно ищут новые методы проникновения.
+					Чтобы защититься и выжить, компании нужно обеспечить надежную защиту на уровне инфраструктуры по требованиям закона о КИИ.
+				.service__roles-label В главных ролях:
+				.service__roles
+					.role
+						+icon('zvirt-max', 'role__title')(width='45', height='19')
+						span.role__note (Виртуализация ФСТЭК)
+					.role
+						+icon('nova-se', 'role__title')(width='40', height='19')
+						span.role__note (Контейнеры ФСТЭК)
+					.role
+						+icon('starvault', 'role__title')(width='84', height='10')
+						span.role__note (Управление секретами)
+				.service__carousel.carousel
+					.carousel__slider.swiper
+						.swiper-wrapper
+							.carousel__slide.swiper-slide
+								+title('Материалы о фильме', 'carousel__title')
+								.carousel__spoiler Спойлер
+								.carousel__text.
+									Компания внедрила комплекс решений Orion soft: виртуализацию, платформу оркестрации контейнеров и хранилище секретов.
+									Продукты сертифицированы ФСТЭК и приводят инфраструктуру в соответствие требованиям закона о КИИ. Все требования
+									регулятора теперь соблюдены.
+						.carousel__pagination.swiper-pagination
+					.carousel__nav.swiper-nav
+						.swiper-btn-prev
+							+icon('arrow-left')(width='14', height='24')
+						.swiper-btn-next
+							+icon('arrow-right')(width='14', height='24')
+				.service__nav
+					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '#', 'arrow-left')
+					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '#', 'arrow-right')

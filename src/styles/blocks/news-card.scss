@@ -1,0 +1,50 @@
+.news-card {
+	$parent: &;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 19px 17px 20px 36px;
+	border: 1px solid $color-button;
+	opacity: 0;
+	transform: translate(-20px, 0);
+	transition: background-color 0.3s ease;
+
+	@include max(ti) {
+		padding: 15px 20px;
+	}
+
+	&:hover {
+		background-color: rgba($color-button, 0.12);
+	}
+
+	& + #{$parent} {
+		margin-top: -1px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.3;
+
+		@include max(tl) {
+			font-size: fluid(15, 16, 768, 992);
+		}
+
+		@include max(ti) {
+			font-size: fluid(14, 15, 0, 768);
+		}
+	}
+
+	&__button {
+		max-width: 41px;
+		height: 36px;
+		padding: 0;
+		clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+
+		svg {
+			width: 15px;
+			height: 11px;
+		}
+	}
+}

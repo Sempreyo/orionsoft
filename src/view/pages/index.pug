@@ -1,0 +1,80 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Orionsoft'
+		};
+
+block header
+	include ../blocks/header
+
+block main
+	section.hero
+		+picture('hero-bg', 'jpg', 'hero__bg-image', '')
+		.hero__board
+			a.board.board--1.anchor(href='#scenario')
+				include ../blocks/window1.html
+				+picture('text1', 'png', 'board__text', '')
+			a.board.board--2.anchor(href='#scenario')
+				include ../blocks/window2.html
+				+picture('text2', 'png', 'board__text', '')
+			a.board.board--3.anchor(href='#scenario')
+				include ../blocks/window3.html
+				+picture('text3', 'png', 'board__text', '')
+	section#scenario.scenario
+		+picture('scenario-bg', 'jpg', 'scenario__bg-image', '')
+		+button('Выберите свой сценарий', 'scenario__button', '#')
+		.scenario__scrollable
+			.scenario__cards
+				a.scenario-card(href='#', target='_blank')
+					.scenario-card__poster
+						+picture('scenario1', 'jpg', 'scenario-card__poster-image', '')
+					.scenario-card__lamp
+						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
+						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
+				a.scenario-card(href='#', target='_blank')
+					.scenario-card__poster
+						+picture('scenario2', 'jpg', 'scenario-card__poster-image', '')
+					.scenario-card__lamp
+						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
+						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
+				a.scenario-card(href='#', target='_blank')
+					.scenario-card__poster
+						+picture('scenario3', 'jpg', 'scenario-card__poster-image', '')
+					.scenario-card__lamp
+						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
+						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
+				a.scenario-card(href='#', target='_blank')
+					.scenario-card__poster
+						+picture('scenario4', 'jpg', 'scenario-card__poster-image', '')
+					.scenario-card__lamp
+						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
+						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
+				a.scenario-card(href='#', target='_blank')
+					.scenario-card__poster
+						+picture('scenario5', 'jpg', 'scenario-card__poster-image', '')
+					.scenario-card__lamp
+						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
+						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
+	section.news
+		.container
+			+title('Новости orion soft', 'news__title')
+			.news__cards
+				a.news-card(href='#', target='_blank')
+					span.news-card__text Использование киберполигона Ampire на базе zVirt
+					+button('', 'news-card__button', '', 'link-arrow')
+				a.news-card(href='#', target='_blank')
+					span.news-card__text Orion soft отчитался о результатах 2025 — выручка выросла на 36%
+					+button('', 'news-card__button', '', 'link-arrow')
+				a.news-card(href='#', target='_blank')
+					span.news-card__text Совместимость серверов Inferit RS (кластер «СФ Тех» ГК Softline) с системой zVirt
+					+button('', 'news-card__button', '', 'link-arrow')
+				a.news-card(href='#', target='_blank')
+					span.news-card__text Orion soft совместно с CICADA8 запустил программу регулярного анализа защищенности экосистемы ПО
+					+button('', 'news-card__button', '', 'link-arrow')
+			.news__all
+				a.news__all-link(href='#', target='_blank') Все новости на сайте →
+
+block footer
+	include ../blocks/footer

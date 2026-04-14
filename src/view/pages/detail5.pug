@@ -1,0 +1,50 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Orionsoft | Detail'
+		};
+
+block main
+	section.service
+		.service__gradient
+		.service__poster
+			+picture('poster5', 'jpg', 'service__poster-image', '')
+		.container.service__container
+			.service__content
+				+button('К афише', 'button--gray service__button', '#', 'arrow-left')
+				.service__rating
+					span 10,0
+					span Топ-5
+				+title('Остров виртуальных рабочих мест <br> Организация виртуальных рабочих мест', 'service__title')
+				.service__description.
+					Сотрудник крупной компании отправляется в командировку на удаленный остров в северных морях. Отсутствие стабильной
+					связи и большое количество задач чуть не сводит его с ума. Компании срочно нужно решение, для организации удаленной
+					работы, чтобы не потерять сотрудника и не увеличить нагрузку на инфраструктуру.
+				.service__roles-label В главных ролях:
+				.service__roles
+					.role
+						+icon('zvirt', 'role__title')(width='45', height='10')
+						span.role__note (Виртуализация)
+					.role
+						+icon('termit', 'role__title')(width='56', height='10')
+						span.role__note (виртуальные рабочие столы (VDI))
+				.service__carousel.carousel
+					.carousel__slider.swiper
+						.swiper-wrapper
+							.carousel__slide.swiper-slide
+								+title('Материалы о фильме', 'carousel__title')
+								.carousel__spoiler Спойлер
+								.carousel__text.
+									Компания внедряет VDI Termit на базе виртуализации zVirt. Решение помогает сотруднику решить все нужные задачи
+									в корпоративных системах прямо с острова и вернуться домой, сохранив рассудок
+						.carousel__pagination.swiper-pagination
+					.carousel__nav.swiper-nav
+						.swiper-btn-prev
+							+icon('arrow-left')(width='14', height='24')
+						.swiper-btn-next
+							+icon('arrow-right')(width='14', height='24')
+				.service__nav
+					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '#', 'arrow-left')
+					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '#', 'arrow-right')

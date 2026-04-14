@@ -1,0 +1,61 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Orionsoft | Detail'
+		};
+
+block main
+	section.service
+		.service__gradient
+		.service__poster
+			+picture('poster1', 'jpg', 'service__poster-image', '')
+		.container.service__container
+			.service__content
+				+button('К афише', 'button--gray service__button', '#', 'arrow-left')
+				.service__rating
+					span 10,0
+					span Топ-5
+				+title('Частное облако с Уолл-стрит <br> Orion private cloud', 'service__title')
+				.service__description.
+					Выдача ресурсов в&nbsp;ИТ-инфраструктуре напоминает оживленные торги на&nbsp;Уолл-стрит – сроки горят, управлять процессом сложно,
+					прогнозирование стоимости владения ИТ практически невозможно.
+				.service__roles-label В главных ролях:
+				.service__roles
+					.role
+						+icon('zvirt', 'role__title')(width='45', height='10')
+						span.role__note (Виртуализация)
+					.role
+						+icon('nova', 'role__title')(width='37', height='10')
+						span.role__note (Контейнеры)
+					.role
+						+icon('cloudlink', 'role__title')(width='80', height='10')
+						span.role__note (CMP-платформа)
+					.role
+						+icon('starvault', 'role__title')(width='84', height='10')
+						span.role__note (Управление секретами)
+				.service__carousel.carousel
+					.carousel__slider.swiper
+						.swiper-wrapper
+							.carousel__slide.swiper-slide
+								+title('Материалы о фильме', 'carousel__title')
+								.carousel__spoiler Спойлер
+								.carousel__text.
+									Компания развернула частное облако Orion Private Cloud. С его помощью в ближайшие пять
+									лет бизнес <span>сэкономит до 30%</span> затрат на ИТ.
+							.carousel__slide.swiper-slide
+								+title('Материалы о фильме', 'carousel__title')
+								.carousel__spoiler Отзыв крупной финансовой организации
+								.carousel__text.
+									«Сюжет закончился «хэппи-эндом»: компания внедрила Orion Private Cloud с доказанным сокращением TCO. А еще мы
+									получили сервис управления ресурсами по принципу маркетплейса, где выдать мощности под задачу так же легко, как заказать товар».
+						.carousel__pagination.swiper-pagination
+					.carousel__nav.swiper-nav
+						.swiper-btn-prev
+							+icon('arrow-left')(width='14', height='24')
+						.swiper-btn-next
+							+icon('arrow-right')(width='14', height='24')
+				.service__nav
+					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '#', 'arrow-left')
+					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '#', 'arrow-right')

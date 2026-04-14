@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orionsoft">
+    <meta name="keywords" content="">
+    <link href="css/main.min.css" rel="stylesheet" type="text/css">
+    <title>Orionsoft | Detail</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="service">
+        <div class="service__gradient"></div>
+        <div class="service__poster">
+          <picture>
+            <source srcset="./images/poster4.webp 1x, ./images/poster4@2x.webp 2x" type="image/webp">
+            <source srcset="./images/poster4.webp 1x, ./images/poster4@2x.webp 2x" type="image/webp"><img class="service__poster-image" src="./images/poster4.jpg" srcset="./images/poster4.jpg 1x, ./images/poster4@2x.jpg 2x" alt="">
+          </picture>
+        </div>
+        <div class="container service__container">
+          <div class="service__content"><a class="button button--gray service__button" href="#"><span>К афише</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-left"></use>
+              </svg></a>
+            <div class="service__rating"><span>10,0</span><span>Топ-5</span></div>
+            <h2 class="title service__title">Начало. Внедрение ML/AI</h2>
+            <div class="service__description">
+              В подсознании ИТ-директора появляется идея внедрения ИИ в процессы компании без закупки дополнительного оборудования.
+              Чтобы реализовать ее и не потеряться в лабиринте реальностей машинного обучения, к нему на помощь приходит команда экспертов Nova AI
+            </div>
+            <div class="service__roles-label">В главных ролях:</div>
+            <div class="service__roles">
+              <div class="role">
+                <svg class="role__title" width="45" height="10">
+                  <use xlink:href="./images/sprite.svg#zvirt"></use>
+                </svg><span class="role__note">(Виртуализация)</span>
+              </div>
+              <div class="role">
+                <svg class="role__title" width="40" height="18">
+                  <use xlink:href="./images/sprite.svg#nova-ai"></use>
+                </svg><span class="role__note">(платформа для ИИ)</span>
+              </div>
+            </div>
+            <div class="service__carousel carousel">
+              <div class="carousel__slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="carousel__slide swiper-slide">
+                    <h2 class="title carousel__title">Материалы о фильме</h2>
+                    <div class="carousel__spoiler">Спойлер</div>
+                    <div class="carousel__text">
+                      Эксперты успешно воплощают идею ИТ-директора в реальность с помощью kubernetes-платформы,
+                      оптимизированной под задачи искусственного интеллекта.
+                    </div>
+                  </div>
+                  <div class="carousel__slide swiper-slide">
+                    <h2 class="title carousel__title">Материалы о фильме</h2>
+                    <div class="carousel__spoiler">Отзыв крупной компании:</div>
+                    <div class="carousel__text">
+                      «В результате внедрения платформы Nova AI мы смогли повысить утилизацию GPU до 80%. Консолидация
+                      нагрузок и эффективное управление ресурсами помогли нам сэкономить 8 млн руб. в год.».
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel__pagination swiper-pagination"></div>
+              </div>
+              <div class="carousel__nav swiper-nav">
+                <div class="swiper-btn-prev">
+                  <svg width="14" height="24">
+                    <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                  </svg>
+                </div>
+                <div class="swiper-btn-next">
+                  <svg width="14" height="24">
+                    <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="#"><span>Предыдущий фильм</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-left"></use>
+                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="#"><span>Следующий фильм</span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-right"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="js/main.min.js" defer></script>
+</html>

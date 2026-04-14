@@ -1,0 +1,82 @@
+.board {
+	$parent: &;
+
+	position: relative;
+	cursor: pointer;
+
+	&.inactive {
+		#{$parent}__window {
+			color: $white;
+			opacity: 0.5 !important;
+		}
+
+		#{$parent}__text {
+			opacity: 0.5 !important;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		transform: translateX(-50%);
+		transition: 0.3s ease;
+		//animation: flicker 3s ease-out forwards;
+	}
+
+	&__window {
+		color: $white;
+		transition: 0.3s ease;
+		//animation: flicker 3s ease-out forwards;
+	}
+
+	&--1 {
+		margin-right: vw(-59);
+
+		#{$parent} {
+			&__window {
+				width: vw(293);
+				height: vw(235);
+			}
+
+			&__text {
+				top: vw(110);
+				left: 54%;
+				width: vw(168);
+				height: vw(81);
+			}
+		}
+	}
+
+	&--2 {
+		#{$parent} {
+			&__window {
+				width: vw(418);
+				height: vw(215);
+			}
+
+			&__text {
+				top: vw(116);
+				left: 48%;
+				width: vw(208);
+				height: vw(49);
+			}
+		}
+	}
+
+	&--3 {
+		margin-left: vw(-55);
+
+		#{$parent} {
+			&__window {
+				width: vw(288);
+				height: vw(230);
+			}
+
+			&__text {
+				top: vw(104);
+				left: 47%;
+				width: vw(144);
+				height: vw(79);
+			}
+		}
+	}
+}

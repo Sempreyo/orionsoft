@@ -1,0 +1,89 @@
+.footer {
+	$parent: &;
+
+	&__container {
+		border-top: 1px solid $color-divider;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 36px 24px 30px;
+
+		@include max(d) {
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		@include max(ti) {
+			justify-content: center;
+		}
+
+		@include max(t) {
+			flex-direction: column;
+		}
+	}
+
+	&__logo-orion {
+		color: $color-text;
+		width: 87px;
+		height: 54px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $color-button;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		gap: 80px;
+		font-size: 13px;
+		line-height: 1.5;
+		margin-left: 95px;
+
+		@include max(tl) {
+			margin-left: 0;
+		}
+
+		@include max(ti) {
+			order: 1;
+			justify-content: center;
+			width: 100%;
+		}
+
+		@include max(t) {
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		a {
+			transition: 0.3s ease;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__socials-item {
+		transition: 0.3s ease;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		svg {
+			width: 27px;
+			height: 27px;
+		}
+	}
+}
