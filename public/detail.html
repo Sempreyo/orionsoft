@@ -6,7 +6,7 @@
     <meta name="description" content="Orionsoft">
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
-    <title>Orionsoft | Detail</title>
+    <title>Частное облако | Orionsoft</title>
   </head>
   <body>
     <main class="main">
@@ -16,18 +16,21 @@
           <picture>
             <source srcset="./images/poster1.webp 1x, ./images/poster1@2x.webp 2x" type="image/webp">
             <source srcset="./images/poster1.webp 1x, ./images/poster1@2x.webp 2x" type="image/webp"><img class="service__poster-image" src="./images/poster1.jpg" srcset="./images/poster1.jpg 1x, ./images/poster1@2x.jpg 2x" alt="">
-          </picture>
+          </picture><a class="button service__show" href="#"><span>Смотреть фильм</span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#arrow-right"></use>
+            </svg></a>
         </div>
         <div class="container service__container">
-          <div class="service__content"><a class="button button--gray service__button" href="#"><span>К афише</span>
+          <div class="service__content"><a class="button button--gray service__button" href="/#scenario"><span>К афише</span>
               <svg>
                 <use xlink:href="./images/sprite.svg#arrow-left"></use>
               </svg></a>
             <div class="service__rating"><span>10,0</span><span>Топ-5</span></div>
-            <h2 class="title service__title">Частное облако с Уолл-стрит <br> Orion private cloud</h2>
+            <h2 class="title service__title">Частное облако с Уолл-стрит <br> <span>Orion private cloud</span></h2>
             <div class="service__description">
-              Выдача ресурсов в&nbsp;ИТ-инфраструктуре напоминает оживленные торги на&nbsp;Уолл-стрит – сроки горят, управлять процессом сложно,
-              прогнозирование стоимости владения ИТ практически невозможно.
+              Выдача ресурсов в ИТ-инфраструктуре напоминает оживленные торги на Уолл-стрит – сроки горят, управлять
+              процессом сложно, прогнозирование стоимости владения ИТ практически невозможно.
             </div>
             <div class="service__roles-label">В главных ролях:</div>
             <div class="service__roles">
@@ -57,19 +60,37 @@
                 <div class="swiper-wrapper">
                   <div class="carousel__slide swiper-slide">
                     <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Спойлер</div>
+                    <h2 class="title carousel__title carousel__title--small">Спойлер</h2>
                     <div class="carousel__text">
-                      Компания развернула частное облако Orion Private Cloud. С его помощью в ближайшие пять
-                      лет бизнес <span>сэкономит до 30%</span> затрат на ИТ.
+                      Компания развернула частное облако Orion Private Cloud. С его помощью бизнес сможет лучше контролировать инфраструктуру
+                      и сэкономит до 200% средств на закупках оборудования. Возврат нагрузок из публичных облаков снизит затраты еще на 30%.
                     </div>
                   </div>
                   <div class="carousel__slide swiper-slide">
                     <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Отзыв крупной финансовой организации</div>
+                    <h2 class="title carousel__title carousel__title--small">Отзыв крупной финансовой организации</h2>
                     <div class="carousel__text">
-                      «Сюжет закончился «хэппи-эндом»: компания внедрила Orion Private Cloud с доказанным сокращением TCO. А еще мы
-                      получили сервис управления ресурсами по принципу маркетплейса, где выдать мощности под задачу так же легко, как заказать товар».
+                      Сюжет закончился «хэппи-эндом»: компания внедрила Orion Private Cloud с доказанным сокращением TCO. А еще мы получили
+                      сервис управления ресурсами по принципу маркетплейса, где выдать мощности под задачу так же легко, как заказать товар.
                     </div>
+                  </div>
+                  <div class="carousel__slide carousel__slide--recommends swiper-slide">
+                    <h2 class="title carousel__title">На основе ваших предпочтений:</h2>
+                    <div class="carousel__recommends"><a class="recommend-card" href="/main/item/workplaces">
+                        <div class="recommend-card__bg">
+                          <picture>
+                            <source srcset="./images/recommend5.webp 1x, ./images/recommend5@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/recommend5.webp 1x, ./images/recommend5@2x.webp 2x" type="image/webp"><img class="recommend-card__bg-image" src="./images/recommend5.jpg" srcset="./images/recommend5.jpg 1x, ./images/recommend5@2x.jpg 2x" alt="">
+                          </picture>
+                        </div>
+                        <div class="recommend-card__title">Организация виртуальных рабочих мест</div></a><a class="recommend-card" href="/main/item/optimization">
+                        <div class="recommend-card__bg">
+                          <picture>
+                            <source srcset="./images/recommend2.webp 1x, ./images/recommend2@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/recommend2.webp 1x, ./images/recommend2@2x.webp 2x" type="image/webp"><img class="recommend-card__bg-image" src="./images/recommend2.jpg" srcset="./images/recommend2.jpg 1x, ./images/recommend2@2x.jpg 2x" alt="">
+                          </picture>
+                        </div>
+                        <div class="recommend-card__title">Оптимизация ресурсов ИТ-инфры</div></a></div>
                   </div>
                 </div>
                 <div class="carousel__pagination swiper-pagination"></div>
@@ -86,11 +107,14 @@
                   </svg>
                 </div>
               </div>
-            </div>
-            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="#"><span>Предыдущий фильм</span>
+            </div><a class="button service__show service__show--mobile" href="#"><span>Смотреть фильм</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-right"></use>
+              </svg></a>
+            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="/main/item/workplaces"><span>Предыдущий фильм</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-left"></use>
-                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="#"><span>Следующий фильм</span>
+                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="/main/item/optimization"><span>Следующий фильм</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-right"></use>
                 </svg></a>

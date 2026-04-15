@@ -6,7 +6,7 @@
     <meta name="description" content="Orionsoft">
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
-    <title>Orionsoft | Detail</title>
+    <title>Оптимизация ресурсов ИТ-инфраструктуры | Orionsoft</title>
   </head>
   <body>
     <main class="main">
@@ -16,26 +16,29 @@
           <picture>
             <source srcset="./images/poster2.webp 1x, ./images/poster2@2x.webp 2x" type="image/webp">
             <source srcset="./images/poster2.webp 1x, ./images/poster2@2x.webp 2x" type="image/webp"><img class="service__poster-image" src="./images/poster2.jpg" srcset="./images/poster2.jpg 1x, ./images/poster2@2x.jpg 2x" alt="">
-          </picture>
+          </picture><a class="button service__show" href="https://www.cnews.ru/redirect.php?22869169dfe26276817+kinoland"><span>Смотреть фильм</span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#arrow-right"></use>
+            </svg></a>
         </div>
         <div class="container service__container">
-          <div class="service__content"><a class="button button--gray service__button" href="#"><span>К афише</span>
+          <div class="service__content"><a class="button button--gray service__button" href="/#scenario"><span>К афише</span>
               <svg>
                 <use xlink:href="./images/sprite.svg#arrow-left"></use>
               </svg></a>
             <div class="service__rating"><span>10,0</span><span>Топ-5</span></div>
-            <h2 class="title service__title">Оптимизируй меня, если сможешь</h2>
+            <h2 class="title service__title">Оптимизируй меня, если сможешь <br> <span>Оптимизация ресурсов ИТ-инфраструктуры</span></h2>
             <div class="service__description">
-              От ИТ-директора все время ускользают ресурсы инфраструктуры, которые он может использовать более эффективно. Чтобы поймать
-              их и задейство-вать на полную мощность, ему придется применить лучшие инструменты управления, мониторинга и аналитики.
-              Какое ПО ему в этом поможет?
+              От ИТ-директора все время ускользают ресурсы инфраструктуры, которые он может использовать более эффективно.
+              Чтобы поймать их и задействовать на полную мощность, ему придется применить лучшие инструменты управления,
+              мониторинга и аналитики. Какое ПО ему в этом поможет?
             </div>
             <div class="service__roles-label">В главных ролях:</div>
             <div class="service__roles">
               <div class="role">
-                <svg class="role__title" width="45" height="19">
-                  <use xlink:href="./images/sprite.svg#zvirt-dcmanager"></use>
-                </svg><span class="role__note">(Централизованное управление виртуализацией)</span>
+                <svg class="role__title" width="80" height="10">
+                  <use xlink:href="./images/sprite.svg#cloudlink"></use>
+                </svg><span class="role__note">(CMP-платформа)</span>
               </div>
               <div class="role">
                 <svg class="role__title" width="45" height="18">
@@ -43,9 +46,19 @@
                 </svg><span class="role__note">(Аналитика и мониторинг)</span>
               </div>
               <div class="role">
-                <svg class="role__title" width="80" height="10">
-                  <use xlink:href="./images/sprite.svg#cloudlink"></use>
-                </svg><span class="role__note">(CMP-платформа)</span>
+                <svg class="role__title" width="45" height="19">
+                  <use xlink:href="./images/sprite.svg#zvirt-dcmanager"></use>
+                </svg><span class="role__note">(Централизованное управление виртуализацией)</span>
+              </div>
+              <div class="role">
+                <svg class="role__title" width="40" height="18">
+                  <use xlink:href="./images/sprite.svg#nova-ai"></use>
+                </svg><span class="role__note">(Платформа для ИИ)</span>
+              </div>
+              <div class="role">
+                <svg class="role__title" width="90" height="10">
+                  <use xlink:href="./images/sprite.svg#hyperdrive"></use>
+                </svg><span class="role__note">(GitOps-платформа)</span>
               </div>
             </div>
             <div class="service__carousel carousel">
@@ -53,27 +66,37 @@
                 <div class="swiper-wrapper">
                   <div class="carousel__slide swiper-slide">
                     <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Спойлер</div>
+                    <h2 class="title carousel__title carousel__title--small">Спойлер</h2>
                     <div class="carousel__text">
-                      Компания внедрила платформу для управления инфраструктурой Cloudlink от Orion soft. Нагрузка на системы теперь
-                      прогнозируемая, а бизнес может планировать покупку только необходимого оборудования. Все неиспользуемые ресурсы были пойманы!
+                      Компания внедрила платформу для управления инфраструктурой Cloudlink от Orion soft. нагрузка на системы теперь прогнозируемая,
+                      а бизнес может планировать покупку только необходимого оборудования. Все неиспользуемые ресурсы были пойманы!
                     </div>
                   </div>
                   <div class="carousel__slide swiper-slide">
                     <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Отзыв крупной компании:</div>
+                    <h2 class="title carousel__title carousel__title--small">Отзыв крупной нефтегазовой компании</h2>
                     <div class="carousel__text">
-                      «С помощью CMP-платформы Cloudlink мы повысили утилизацию <span>CPU с 22% до 60%</span>. В перспективе это поможет
-                      нам сэкономить более 100 млн руб. в год».
+                      После внедрения zVirt Metrics и DC Manager мы обнаружили 38% свободных мощностей и не закупили
+                      лишних серверов — сэкономили 160 млн руб.
                     </div>
                   </div>
-                  <div class="carousel__slide swiper-slide">
-                    <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Отзыв крупной компании:</div>
-                    <div class="carousel__text">
-                      «После внедрения zVirt Metrics и DC Manager мы обнаружили 38% свободных мощностей и не закупили лишних
-                      серверов — <span>сэкономили 160 млн руб.</span>».
-                    </div>
+                  <div class="carousel__slide carousel__slide--recommends swiper-slide">
+                    <h2 class="title carousel__title">На основе ваших предпочтений:</h2>
+                    <div class="carousel__recommends"><a class="recommend-card" href="/main/item/cloud">
+                        <div class="recommend-card__bg">
+                          <picture>
+                            <source srcset="./images/recommend1.webp 1x, ./images/recommend1@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/recommend1.webp 1x, ./images/recommend1@2x.webp 2x" type="image/webp"><img class="recommend-card__bg-image" src="./images/recommend1.jpg" srcset="./images/recommend1.jpg 1x, ./images/recommend1@2x.jpg 2x" alt="">
+                          </picture>
+                        </div>
+                        <div class="recommend-card__title">Организация виртуальных рабочих мест</div></a><a class="recommend-card" href="/main/item/kii">
+                        <div class="recommend-card__bg">
+                          <picture>
+                            <source srcset="./images/recommend3.webp 1x, ./images/recommend3@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/recommend3.webp 1x, ./images/recommend3@2x.webp 2x" type="image/webp"><img class="recommend-card__bg-image" src="./images/recommend3.jpg" srcset="./images/recommend3.jpg 1x, ./images/recommend3@2x.jpg 2x" alt="">
+                          </picture>
+                        </div>
+                        <div class="recommend-card__title">Оптимизация ресурсов ИТ-инфры</div></a></div>
                   </div>
                 </div>
                 <div class="carousel__pagination swiper-pagination"></div>
@@ -90,11 +113,14 @@
                   </svg>
                 </div>
               </div>
-            </div>
-            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="#"><span>Предыдущий фильм</span>
+            </div><a class="button service__show service__show--mobile" href="https://www.cnews.ru/redirect.php?22869169dfe26276817+kinoland"><span>Смотреть фильм</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-right"></use>
+              </svg></a>
+            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="/main/item/cloud"><span>Предыдущий фильм</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-left"></use>
-                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="#"><span>Следующий фильм</span>
+                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="/main/item/kii"><span>Следующий фильм</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-right"></use>
                 </svg></a>

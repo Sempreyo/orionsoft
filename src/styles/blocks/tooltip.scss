@@ -1,0 +1,183 @@
+.tooltip {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	max-width: 560px;
+	clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+	box-shadow: 0 0 24px rgba(98, 114, 237, 0.4);
+	background-color: $color-button;
+	padding: 20px;
+
+	@include max(d) {
+		gap: vw(16);
+		max-width: vw(560);
+		clip-path: polygon(0 0, calc(100% - vw(25)) 0, 100% vw(25), 100% 100%, 0 100%);
+		box-shadow: 0 0 vw(24) rgba(98, 114, 237, 0.4);
+		padding: vw(20);
+	}
+
+	@include max(ti) {
+		gap: 16px;
+		max-width: 500px;
+		width: 100%;
+		clip-path: none;
+		box-shadow: none;
+		background-color: transparent;
+		padding: 20px 11px 8px 8px;
+	}
+
+	@include max(t) {
+		max-width: 260px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		box-shadow: 0 0 24px rgba(98, 114, 237, 0.4);
+		background-color: $color-button;
+	}
+
+	&__person {
+		position: relative;
+		min-width: 118px;
+		max-width: 118px;
+
+		@include max(d) {
+			min-width: vw(118);
+			max-width: vw(118);
+		}
+
+		@include max(ti) {
+			position: absolute;
+			left: 8px;
+			bottom: calc(100% - 8px);
+			min-width: 97px;
+			max-width: 97px;
+		}
+	}
+
+	&__person-image {
+		width: 118px;
+		height: 100px;
+		object-fit: cover;
+
+		@include max(d) {
+			width: vw(118);
+			height: vw(100);
+		}
+
+		@include max(ti) {
+			width: 97px;
+			height: 76px;
+			object-position: top;
+		}
+	}
+
+	&__name {
+		background-color: $color-divider;
+		padding: 4px;
+		font-size: 10px;
+		line-height: 1.2;
+		text-align: center;
+
+		@include max(d) {
+			padding: vw(4);
+			font-size: vw(10);
+		}
+
+		@include max(ti) {
+			padding: 4px;
+			font-size: 10px;
+		}
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding-top: 10px;
+
+		@include max(d) {
+			padding-top: vw(10);
+		}
+
+		@include max(ti) {
+			padding-top: 0;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.3;
+
+		@include max(d) {
+			font-size: vw(16);
+		}
+
+		@include max(ti) {
+			font-size: 12px;
+			line-height: 1.2;
+		}
+
+		span {
+			font-weight: 600;
+		}
+
+		br {
+			@include max(ti) {
+				display: none;
+			}
+		}
+
+		.char {
+			opacity: 0;
+		}
+	}
+
+	&__button {
+		gap: 10px;
+		max-width: 147px;
+		padding: 10px 15px;
+		clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+		font-weight: 500;
+		font-size: 16px;
+		margin-left: auto;
+		margin-top: 10px;
+		opacity: 0;
+
+		@include max(d) {
+			gap: vw(10);
+			max-width: vw(147);
+			padding: vw(10) vw(15);
+			clip-path: polygon(0 0, calc(100% - vw(10)) 0, 100% vw(10), 100% 100%, 0 100%);
+			font-size: vw(16);
+			margin-top: vw(10);
+		}
+
+		@include max(ti) {
+			gap: 10px;
+			max-width: 147px;
+			padding: 10px 15px;
+			clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+			font-size: 16px;
+			margin-top: 10px;
+		}
+
+		svg {
+			width: 21px;
+			height: 15px;
+
+			@include max(d) {
+				width: vw(21);
+				height: vw(15);
+			}
+
+			@include max(ti) {
+				width: 21px;
+				height: 15px;
+			}
+		}
+	}
+}

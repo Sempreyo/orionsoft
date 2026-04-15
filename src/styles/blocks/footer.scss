@@ -17,11 +17,10 @@
 		}
 
 		@include max(ti) {
-			justify-content: center;
-		}
-
-		@include max(t) {
 			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding: 34px 0 46px;
 		}
 	}
 
@@ -30,6 +29,11 @@
 		width: 87px;
 		height: 54px;
 		transition: color 0.3s ease;
+
+		@include max(ti) {
+			width: 58px;
+			height: 39px;
+		}
 
 		&:hover {
 			color: $color-button;
@@ -49,14 +53,12 @@
 		}
 
 		@include max(ti) {
-			order: 1;
-			justify-content: center;
-			width: 100%;
-		}
-
-		@include max(t) {
 			flex-direction: column;
-			gap: 20px;
+			gap: 8px;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+			font-size: 14px;
 		}
 
 		a {

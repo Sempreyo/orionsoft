@@ -11,7 +11,14 @@ block header
 
 block main
 	section.hero
-		+picture('hero-bg', 'jpg', 'hero__bg-image', '')
+		+picture('hero-bg', 'jpg', 'hero__bg-image', '', 'hero-bg-mobile')
+		.hero__tooltip.tooltip
+			.tooltip__person
+				+picture('person', 'jpg', 'tooltip__person-image', '', 'person-mobile')
+				.tooltip__name Орионардо Ди Софтио
+			.tooltip__content
+				.tooltip__text Сегодня на экране — самые обсуждаемые бизнес-сценарии оптимизации ресурсов этого года. <br> <span>Выбирайте, какой вам ближе.</span>
+				+button('к афише', 'anchor button--dark tooltip__button', '#scenario', 'link-arrow')
 		.hero__board
 			a.board.board--1.anchor(href='#scenario')
 				include ../blocks/window1.html
@@ -24,36 +31,51 @@ block main
 				+picture('text3', 'png', 'board__text', '')
 	section#scenario.scenario
 		+picture('scenario-bg', 'jpg', 'scenario__bg-image', '')
-		+button('Выберите свой сценарий', 'scenario__button', '#')
+		.scenario__title Выберите свой сценарий
+		.scenario__webinar.webinar
+			+icon('close', 'webinar__close')
+			+icon('arrow-right', 'webinar__icon')
+			a.webinar__link(href='https://www.cnews.ru/redirect.php?26593069dfe4b1613bc+kinoland', target='_blank')
+			.webinar__text <span>Вебинар</span> <br> про оптимизацию ИТ <br> 24 апреля
 		.scenario__scrollable
 			.scenario__cards
-				a.scenario-card(href='#', target='_blank')
+				a.scenario-card(href='/main/item/cloud', target='_blank')
 					.scenario-card__poster
+						.scenario-card__poster-text Частное облако
 						+picture('scenario1', 'jpg', 'scenario-card__poster-image', '')
+						.scenario-card__poster-text.scenario-card__poster-text--small Впервые на российских экранах: модульное, облако для Enterprise с легким порогом входа
 					.scenario-card__lamp
 						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
 						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
-				a.scenario-card(href='#', target='_blank')
+				a.scenario-card(href='/main/item/optimization', target='_blank')
 					.scenario-card__poster
+						.scenario-card__poster-text Оптимизация ресурсов <nobr>ИТ-инфры</nobr>
 						+picture('scenario2', 'jpg', 'scenario-card__poster-image', '')
+						.scenario-card__poster-text.scenario-card__poster-text--small Бесконечные вопросы о том, как делать проекты и сокращать бюджеты?
 					.scenario-card__lamp
 						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
 						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
-				a.scenario-card(href='#', target='_blank')
+				a.scenario-card(href='/main/item/kii', target='_blank')
 					.scenario-card__poster
+						.scenario-card__poster-text Защищенная инфраструктура под КИИ
 						+picture('scenario3', 'jpg', 'scenario-card__poster-image', '')
+						.scenario-card__poster-text.scenario-card__poster-text--small Компании нужно быстро найти решение, отвечающее требованиям регуляторов
 					.scenario-card__lamp
 						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
 						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
-				a.scenario-card(href='#', target='_blank')
+				a.scenario-card(href='/main/item/ai', target='_blank')
 					.scenario-card__poster
+						.scenario-card__poster-text Внедрение ML/AI
 						+picture('scenario4', 'jpg', 'scenario-card__poster-image', '')
+						.scenario-card__poster-text.scenario-card__poster-text--small Внедрение ИИ в процессы – уже не фантастика, а реальный кейс
 					.scenario-card__lamp
 						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
 						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
-				a.scenario-card(href='#', target='_blank')
+				a.scenario-card(href='/main/item/workplaces', target='_blank')
 					.scenario-card__poster
+						.scenario-card__poster-text Организация виртуальных рабочих мест
 						+picture('scenario5', 'jpg', 'scenario-card__poster-image', '')
+						.scenario-card__poster-text.scenario-card__poster-text--small Сотрудник отправился в командировку... на далекий остров. Как организовать удаленное рабочее место?
 					.scenario-card__lamp
 						+picture('lamp', 'png', 'scenario-card__lamp-image', '')
 						+picture('lamp-active', 'png', 'scenario-card__lamp-image-active', '')
@@ -61,20 +83,20 @@ block main
 		.container
 			+title('Новости orion soft', 'news__title')
 			.news__cards
-				a.news-card(href='#', target='_blank')
-					span.news-card__text Использование киберполигона Ampire на базе zVirt
+				a.news-card(href='https://www.cnews.ru/redirect.php?41113969dcda1a47a5b+kinoland', target='_blank')
+					span.news-card__text Использование киберполигона Ampire на&nbsp;базе zVirt
 					+button('', 'news-card__button', '', 'link-arrow')
 				a.news-card(href='#', target='_blank')
-					span.news-card__text Orion soft отчитался о результатах 2025 — выручка выросла на 36%
+					span.news-card__text Orion soft отчитался о&nbsp;результатах 2025 — выручка выросла на&nbsp;36%
 					+button('', 'news-card__button', '', 'link-arrow')
-				a.news-card(href='#', target='_blank')
-					span.news-card__text Совместимость серверов Inferit RS (кластер «СФ Тех» ГК Softline) с системой zVirt
+				a.news-card(href='https://www.cnews.ru/redirect.php?10249469dcda3f46a2c+kinoland', target='_blank')
+					span.news-card__text Совместимость серверов Inferit RS (кластер «СФ Тех» ГК Softline) с&nbsp;системой zVirt
 					+button('', 'news-card__button', '', 'link-arrow')
-				a.news-card(href='#', target='_blank')
-					span.news-card__text Orion soft совместно с CICADA8 запустил программу регулярного анализа защищенности экосистемы ПО
+				a.news-card(href='https://www.cnews.ru/redirect.php?11789469dcda54c4294+kinoland', target='_blank')
+					span.news-card__text Orion soft совместно с&nbsp;CICADA8 запустил программу регулярного анализа защищенности экосистемы ПО
 					+button('', 'news-card__button', '', 'link-arrow')
 			.news__all
-				a.news__all-link(href='#', target='_blank') Все новости на сайте →
+				a.news__all-link(href='https://www.cnews.ru/redirect.php?924660650c2bbd515dc+kinoland', target='_blank') Все новости на сайте →
 
 block footer
 	include ../blocks/footer

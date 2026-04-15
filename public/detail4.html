@@ -6,7 +6,7 @@
     <meta name="description" content="Orionsoft">
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
-    <title>Orionsoft | Detail</title>
+    <title>Внедрение ML/AI | Orionsoft</title>
   </head>
   <body>
     <main class="main">
@@ -16,18 +16,21 @@
           <picture>
             <source srcset="./images/poster4.webp 1x, ./images/poster4@2x.webp 2x" type="image/webp">
             <source srcset="./images/poster4.webp 1x, ./images/poster4@2x.webp 2x" type="image/webp"><img class="service__poster-image" src="./images/poster4.jpg" srcset="./images/poster4.jpg 1x, ./images/poster4@2x.jpg 2x" alt="">
-          </picture>
+          </picture><a class="button service__show" href="#"><span>Смотреть фильм</span>
+            <svg>
+              <use xlink:href="./images/sprite.svg#arrow-right"></use>
+            </svg></a>
         </div>
         <div class="container service__container">
-          <div class="service__content"><a class="button button--gray service__button" href="#"><span>К афише</span>
+          <div class="service__content"><a class="button button--gray service__button" href="/#scenario"><span>К афише</span>
               <svg>
                 <use xlink:href="./images/sprite.svg#arrow-left"></use>
               </svg></a>
             <div class="service__rating"><span>10,0</span><span>Топ-5</span></div>
-            <h2 class="title service__title">Начало. Внедрение ML/AI</h2>
+            <h2 class="title service__title">Начало <br> <span>Внедрение ML/AI</span></h2>
             <div class="service__description">
               В подсознании ИТ-директора появляется идея внедрения ИИ в процессы компании без закупки дополнительного оборудования.
-              Чтобы реализовать ее и не потеряться в лабиринте реальностей машинного обучения, к нему на помощь приходит команда экспертов Nova AI
+              Чтобы реализовать ее и не потеряться в лабиринте реальностей машинного обучения, к нему на помощь приходит команда экспертов Nova AI.
             </div>
             <div class="service__roles-label">В главных ролях:</div>
             <div class="service__roles">
@@ -39,7 +42,7 @@
               <div class="role">
                 <svg class="role__title" width="40" height="18">
                   <use xlink:href="./images/sprite.svg#nova-ai"></use>
-                </svg><span class="role__note">(платформа для ИИ)</span>
+                </svg><span class="role__note">(Платформа для ИИ)</span>
               </div>
             </div>
             <div class="service__carousel carousel">
@@ -47,19 +50,38 @@
                 <div class="swiper-wrapper">
                   <div class="carousel__slide swiper-slide">
                     <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Спойлер</div>
+                    <h2 class="title carousel__title carousel__title--small">Спойлер</h2>
                     <div class="carousel__text">
-                      Эксперты успешно воплощают идею ИТ-директора в реальность с помощью kubernetes-платформы,
-                      оптимизированной под задачи искусственного интеллекта.
+                      Эксперты успешно воплотили идею ИТ-директора в реальность с помощью kubernetes-платформы,
+                      оптимизированной под задачи искусственного интеллекта. Компания повысила утилизацию GPU в два
+                      раза и решает ИИ-задачи на текущем железе.
                     </div>
                   </div>
                   <div class="carousel__slide swiper-slide">
                     <h2 class="title carousel__title">Материалы о фильме</h2>
-                    <div class="carousel__spoiler">Отзыв крупной компании:</div>
+                    <h2 class="title carousel__title carousel__title--small">Отзыв крупной государственной компании</h2>
                     <div class="carousel__text">
-                      «В результате внедрения платформы Nova AI мы смогли повысить утилизацию GPU до 80%. Консолидация
-                      нагрузок и эффективное управление ресурсами помогли нам сэкономить 8 млн руб. в год.».
+                      В результате внедрения платформы Nova AI мы смогли повысить утилизацию GPU в 2.9 раз — с 30% до 88%.
+                      Нам не пришлось покупать оборудование и расширять команду, что сэкономило компании 120 млн руб.
                     </div>
+                  </div>
+                  <div class="carousel__slide carousel__slide--recommends swiper-slide">
+                    <h2 class="title carousel__title">На основе ваших предпочтений:</h2>
+                    <div class="carousel__recommends"><a class="recommend-card" href="/main/item/kii">
+                        <div class="recommend-card__bg">
+                          <picture>
+                            <source srcset="./images/recommend3.webp 1x, ./images/recommend3@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/recommend3.webp 1x, ./images/recommend3@2x.webp 2x" type="image/webp"><img class="recommend-card__bg-image" src="./images/recommend3.jpg" srcset="./images/recommend3.jpg 1x, ./images/recommend3@2x.jpg 2x" alt="">
+                          </picture>
+                        </div>
+                        <div class="recommend-card__title">Организация виртуальных рабочих мест</div></a><a class="recommend-card" href="/main/item/workplaces">
+                        <div class="recommend-card__bg">
+                          <picture>
+                            <source srcset="./images/recommend5.webp 1x, ./images/recommend5@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/recommend5.webp 1x, ./images/recommend5@2x.webp 2x" type="image/webp"><img class="recommend-card__bg-image" src="./images/recommend5.jpg" srcset="./images/recommend5.jpg 1x, ./images/recommend5@2x.jpg 2x" alt="">
+                          </picture>
+                        </div>
+                        <div class="recommend-card__title">Оптимизация ресурсов ИТ-инфры</div></a></div>
                   </div>
                 </div>
                 <div class="carousel__pagination swiper-pagination"></div>
@@ -76,11 +98,14 @@
                   </svg>
                 </div>
               </div>
-            </div>
-            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="#"><span>Предыдущий фильм</span>
+            </div><a class="button service__show service__show--mobile" href="#"><span>Смотреть фильм</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-right"></use>
+              </svg></a>
+            <div class="service__nav"><a class="button button--outline service__nav-button service__nav-button--prev" href="/main/item/kii"><span>Предыдущий фильм</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-left"></use>
-                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="#"><span>Следующий фильм</span>
+                </svg></a><a class="button button--outline service__nav-button service__nav-button--next" href="/main/item/workplaces"><span>Следующий фильм</span>
                 <svg>
                   <use xlink:href="./images/sprite.svg#arrow-right"></use>
                 </svg></a>

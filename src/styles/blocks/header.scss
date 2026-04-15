@@ -11,8 +11,8 @@
 		padding: 20px 0;
 	}
 
-	@include max(t) {
-		padding: 8px 0;
+	@include max(ti) {
+		padding: 20px 15px;
 	}
 
 	&__container {
@@ -20,6 +20,10 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 20px;
+
+		@include max(ti) {
+			align-items: flex-start;
+		}
 
 		a {
 			display: inline-flex;
@@ -51,14 +55,9 @@
 			height: 37px;
 		}
 
-		@include max(ti) {
-			width: 39px;
-			height: 26px;
-		}
-
 		@include max(t) {
-			width: 28px;
-			height: 19px;
+			width: 40px;
+			height: 27px;
 		}
 	}
 
@@ -73,14 +72,9 @@
 			height: 18px;
 		}
 
-		@include max(ti) {
-			width: 65px;
-			height: 13px;
-		}
-
 		@include max(t) {
-			width: 50px;
-			height: 10px;
+			width: 62px;
+			height: 12px;
 		}
 	}
 }

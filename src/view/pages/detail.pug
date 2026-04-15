@@ -3,7 +3,7 @@ extends ../layouts/default
 block vars
 	-
 		const page = {
-			title: 'Orionsoft | Detail'
+			title: 'Частное облако | Orionsoft'
 		};
 
 block main
@@ -11,16 +11,17 @@ block main
 		.service__gradient
 		.service__poster
 			+picture('poster1', 'jpg', 'service__poster-image', '')
+			+button('Смотреть фильм', 'service__show', '#', 'arrow-right')
 		.container.service__container
 			.service__content
-				+button('К афише', 'button--gray service__button', '#', 'arrow-left')
+				+button('К афише', 'button--gray service__button', '/#scenario', 'arrow-left')
 				.service__rating
 					span 10,0
 					span Топ-5
-				+title('Частное облако с Уолл-стрит <br> Orion private cloud', 'service__title')
+				+title('Частное облако с Уолл-стрит <br> <span>Orion private cloud</span>', 'service__title')
 				.service__description.
-					Выдача ресурсов в&nbsp;ИТ-инфраструктуре напоминает оживленные торги на&nbsp;Уолл-стрит – сроки горят, управлять процессом сложно,
-					прогнозирование стоимости владения ИТ практически невозможно.
+					Выдача ресурсов в ИТ-инфраструктуре напоминает оживленные торги на Уолл-стрит – сроки горят, управлять
+					процессом сложно, прогнозирование стоимости владения ИТ практически невозможно.
 				.service__roles-label В главных ролях:
 				.service__roles
 					.role
@@ -40,22 +41,34 @@ block main
 						.swiper-wrapper
 							.carousel__slide.swiper-slide
 								+title('Материалы о фильме', 'carousel__title')
-								.carousel__spoiler Спойлер
+								+title('Спойлер', 'carousel__title carousel__title--small')
 								.carousel__text.
-									Компания развернула частное облако Orion Private Cloud. С его помощью в ближайшие пять
-									лет бизнес <span>сэкономит до 30%</span> затрат на ИТ.
+									Компания развернула частное облако Orion Private Cloud. С его помощью бизнес сможет лучше контролировать инфраструктуру
+									и сэкономит до 200% средств на закупках оборудования. Возврат нагрузок из публичных облаков снизит затраты еще на 30%.
 							.carousel__slide.swiper-slide
 								+title('Материалы о фильме', 'carousel__title')
-								.carousel__spoiler Отзыв крупной финансовой организации
+								+title('Отзыв крупной финансовой организации', 'carousel__title carousel__title--small')
 								.carousel__text.
-									«Сюжет закончился «хэппи-эндом»: компания внедрила Orion Private Cloud с доказанным сокращением TCO. А еще мы
-									получили сервис управления ресурсами по принципу маркетплейса, где выдать мощности под задачу так же легко, как заказать товар».
+									Сюжет закончился «хэппи-эндом»: компания внедрила Orion Private Cloud с доказанным сокращением TCO. А еще мы получили
+									сервис управления ресурсами по принципу маркетплейса, где выдать мощности под задачу так же легко, как заказать товар.
+							.carousel__slide.carousel__slide--recommends.swiper-slide
+								+title('На основе ваших предпочтений:', 'carousel__title')
+								.carousel__recommends
+									a.recommend-card(href='/main/item/workplaces')
+										.recommend-card__bg
+											+picture('recommend5', 'jpg', 'recommend-card__bg-image', '')
+										.recommend-card__title Организация виртуальных рабочих мест
+									a.recommend-card(href='/main/item/optimization')
+										.recommend-card__bg
+											+picture('recommend2', 'jpg', 'recommend-card__bg-image', '')
+										.recommend-card__title Оптимизация ресурсов ИТ-инфры
 						.carousel__pagination.swiper-pagination
 					.carousel__nav.swiper-nav
 						.swiper-btn-prev
 							+icon('arrow-left')(width='14', height='24')
 						.swiper-btn-next
 							+icon('arrow-right')(width='14', height='24')
+				+button('Смотреть фильм', 'service__show service__show--mobile', '#', 'arrow-right')
 				.service__nav
-					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '#', 'arrow-left')
-					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '#', 'arrow-right')
+					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '/main/item/workplaces', 'arrow-left')
+					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '/main/item/optimization', 'arrow-right')

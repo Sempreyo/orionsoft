@@ -45,6 +45,14 @@
 		}
 	}
 
+	&--dark {
+		background-color: $color-button-2-hover;
+
+		&:hover {
+			background-color: $color-button-2;
+		}
+	}
+
 	&--outline {
 		background-color: transparent;
 		clip-path: none;

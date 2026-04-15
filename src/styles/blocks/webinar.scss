@@ -1,0 +1,64 @@
+.webinar {
+	$parent: &;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 278px;
+	width: 100%;
+	padding: 18px 30px 18px 20px;
+	border-radius: 10px;
+	background-color: rgba($color-background, 0.79);
+	border: 1px solid $color-button-2;
+	opacity: 0;
+	transition: 0.3s ease;
+
+	&.hide {
+		opacity: 0 !important;
+		pointer-events: none;
+	}
+
+	&__link {
+		position: absolute;
+		inset: 0;
+
+		&:hover {
+			& + #{$parent}__text {
+				color: $color-button;
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 1;
+		width: 14px;
+		height: 15px;
+		color: $color-text;
+		cursor: pointer;
+		transition: 0.3s ease;
+
+		&:hover {
+			color: $color-button;
+		}
+	}
+
+	&__icon {
+		width: 26px;
+		height: 46px;
+		color: $color-button;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.2;
+		transition: 0.3s ease;
+
+		span {
+			font-weight: 600;
+		}
+	}
+}

@@ -52,9 +52,28 @@
     <main class="main">
       <section class="hero">
         <picture>
+          <source srcset="./images/hero-bg-mobile.jpg 1x, ./images/hero-bg-mobile@2x.jpg 2x" media="(max-width: 767px) ">
+          <source srcset="./images/hero-bg-mobile.webp 1x, ./images/hero-bg-mobile@2x.webp 2x" media="(max-width: 767px)">
           <source srcset="./images/hero-bg.webp 1x, ./images/hero-bg@2x.webp 2x" type="image/webp">
           <source srcset="./images/hero-bg.webp 1x, ./images/hero-bg@2x.webp 2x" type="image/webp"><img class="hero__bg-image" src="./images/hero-bg.jpg" srcset="./images/hero-bg.jpg 1x, ./images/hero-bg@2x.jpg 2x" alt="">
         </picture>
+        <div class="hero__tooltip tooltip">
+          <div class="tooltip__person">
+            <picture>
+              <source srcset="./images/person-mobile.jpg 1x, ./images/person-mobile@2x.jpg 2x" media="(max-width: 767px) ">
+              <source srcset="./images/person-mobile.webp 1x, ./images/person-mobile@2x.webp 2x" media="(max-width: 767px)">
+              <source srcset="./images/person.webp 1x, ./images/person@2x.webp 2x" type="image/webp">
+              <source srcset="./images/person.webp 1x, ./images/person@2x.webp 2x" type="image/webp"><img class="tooltip__person-image" src="./images/person.jpg" srcset="./images/person.jpg 1x, ./images/person@2x.jpg 2x" alt="">
+            </picture>
+            <div class="tooltip__name">Орионардо Ди Софтио</div>
+          </div>
+          <div class="tooltip__content">
+            <div class="tooltip__text">Сегодня на экране — самые обсуждаемые бизнес-сценарии оптимизации ресурсов этого года. <br> <span>Выбирайте, какой вам ближе.</span></div><a class="button anchor button--dark tooltip__button" href="#scenario"><span>к афише</span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#link-arrow"></use>
+              </svg></a>
+          </div>
+        </div>
         <div class="hero__board"><a class="board board--1 anchor" href="#scenario"><svg class="board__window" viewBox="0 0 293 235" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<g filter="url(#filter0_f_495_433)">
 		<path d="M70 135V205.5L255 186L256 103.5L70 135Z" fill="url(#paint0_radial_495_433)" fill-opacity="0.46"/>
@@ -223,14 +242,26 @@
         <picture>
           <source srcset="./images/scenario-bg.webp 1x, ./images/scenario-bg@2x.webp 2x" type="image/webp">
           <source srcset="./images/scenario-bg.webp 1x, ./images/scenario-bg@2x.webp 2x" type="image/webp"><img class="scenario__bg-image" src="./images/scenario-bg.jpg" srcset="./images/scenario-bg.jpg 1x, ./images/scenario-bg@2x.jpg 2x" alt="">
-        </picture><a class="button scenario__button" href="#"><span>Выберите свой сценарий</span></a>
+        </picture>
+        <div class="scenario__title">Выберите свой сценарий</div>
+        <div class="scenario__webinar webinar">
+          <svg class="webinar__close">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+          <svg class="webinar__icon">
+            <use xlink:href="./images/sprite.svg#arrow-right"></use>
+          </svg><a class="webinar__link" href="https://www.cnews.ru/redirect.php?26593069dfe4b1613bc+kinoland" target="_blank"></a>
+          <div class="webinar__text"><span>Вебинар</span> <br> про оптимизацию ИТ <br> 24 апреля</div>
+        </div>
         <div class="scenario__scrollable">
-          <div class="scenario__cards"><a class="scenario-card" href="#" target="_blank">
+          <div class="scenario__cards"><a class="scenario-card" href="/main/item/cloud" target="_blank">
               <div class="scenario-card__poster">
+                <div class="scenario-card__poster-text">Частное облако</div>
                 <picture>
                   <source srcset="./images/scenario1.webp 1x, ./images/scenario1@2x.webp 2x" type="image/webp">
                   <source srcset="./images/scenario1.webp 1x, ./images/scenario1@2x.webp 2x" type="image/webp"><img class="scenario-card__poster-image" src="./images/scenario1.jpg" srcset="./images/scenario1.jpg 1x, ./images/scenario1@2x.jpg 2x" alt="">
                 </picture>
+                <div class="scenario-card__poster-text scenario-card__poster-text--small">Впервые на российских экранах: модульное, облако для Enterprise с легким порогом входа</div>
               </div>
               <div class="scenario-card__lamp">
                 <picture>
@@ -241,12 +272,14 @@
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp">
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp"><img class="scenario-card__lamp-image-active" src="./images/lamp-active.png" srcset="./images/lamp-active.png 1x, ./images/lamp-active@2x.png 2x" alt="">
                 </picture>
-              </div></a><a class="scenario-card" href="#" target="_blank">
+              </div></a><a class="scenario-card" href="/main/item/optimization" target="_blank">
               <div class="scenario-card__poster">
+                <div class="scenario-card__poster-text">Оптимизация ресурсов <nobr>ИТ-инфры</nobr></div>
                 <picture>
                   <source srcset="./images/scenario2.webp 1x, ./images/scenario2@2x.webp 2x" type="image/webp">
                   <source srcset="./images/scenario2.webp 1x, ./images/scenario2@2x.webp 2x" type="image/webp"><img class="scenario-card__poster-image" src="./images/scenario2.jpg" srcset="./images/scenario2.jpg 1x, ./images/scenario2@2x.jpg 2x" alt="">
                 </picture>
+                <div class="scenario-card__poster-text scenario-card__poster-text--small">Бесконечные вопросы о том, как делать проекты и сокращать бюджеты?</div>
               </div>
               <div class="scenario-card__lamp">
                 <picture>
@@ -257,12 +290,14 @@
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp">
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp"><img class="scenario-card__lamp-image-active" src="./images/lamp-active.png" srcset="./images/lamp-active.png 1x, ./images/lamp-active@2x.png 2x" alt="">
                 </picture>
-              </div></a><a class="scenario-card" href="#" target="_blank">
+              </div></a><a class="scenario-card" href="/main/item/kii" target="_blank">
               <div class="scenario-card__poster">
+                <div class="scenario-card__poster-text">Защищенная инфраструктура под КИИ</div>
                 <picture>
                   <source srcset="./images/scenario3.webp 1x, ./images/scenario3@2x.webp 2x" type="image/webp">
                   <source srcset="./images/scenario3.webp 1x, ./images/scenario3@2x.webp 2x" type="image/webp"><img class="scenario-card__poster-image" src="./images/scenario3.jpg" srcset="./images/scenario3.jpg 1x, ./images/scenario3@2x.jpg 2x" alt="">
                 </picture>
+                <div class="scenario-card__poster-text scenario-card__poster-text--small">Компании нужно быстро найти решение, отвечающее требованиям регуляторов</div>
               </div>
               <div class="scenario-card__lamp">
                 <picture>
@@ -273,12 +308,14 @@
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp">
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp"><img class="scenario-card__lamp-image-active" src="./images/lamp-active.png" srcset="./images/lamp-active.png 1x, ./images/lamp-active@2x.png 2x" alt="">
                 </picture>
-              </div></a><a class="scenario-card" href="#" target="_blank">
+              </div></a><a class="scenario-card" href="/main/item/ai" target="_blank">
               <div class="scenario-card__poster">
+                <div class="scenario-card__poster-text">Внедрение ML/AI</div>
                 <picture>
                   <source srcset="./images/scenario4.webp 1x, ./images/scenario4@2x.webp 2x" type="image/webp">
                   <source srcset="./images/scenario4.webp 1x, ./images/scenario4@2x.webp 2x" type="image/webp"><img class="scenario-card__poster-image" src="./images/scenario4.jpg" srcset="./images/scenario4.jpg 1x, ./images/scenario4@2x.jpg 2x" alt="">
                 </picture>
+                <div class="scenario-card__poster-text scenario-card__poster-text--small">Внедрение ИИ в процессы – уже не фантастика, а реальный кейс</div>
               </div>
               <div class="scenario-card__lamp">
                 <picture>
@@ -289,12 +326,14 @@
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp">
                   <source srcset="./images/lamp-active.webp 1x, ./images/lamp-active@2x.webp 2x" type="image/webp"><img class="scenario-card__lamp-image-active" src="./images/lamp-active.png" srcset="./images/lamp-active.png 1x, ./images/lamp-active@2x.png 2x" alt="">
                 </picture>
-              </div></a><a class="scenario-card" href="#" target="_blank">
+              </div></a><a class="scenario-card" href="/main/item/workplaces" target="_blank">
               <div class="scenario-card__poster">
+                <div class="scenario-card__poster-text">Организация виртуальных рабочих мест</div>
                 <picture>
                   <source srcset="./images/scenario5.webp 1x, ./images/scenario5@2x.webp 2x" type="image/webp">
                   <source srcset="./images/scenario5.webp 1x, ./images/scenario5@2x.webp 2x" type="image/webp"><img class="scenario-card__poster-image" src="./images/scenario5.jpg" srcset="./images/scenario5.jpg 1x, ./images/scenario5@2x.jpg 2x" alt="">
                 </picture>
+                <div class="scenario-card__poster-text scenario-card__poster-text--small">Сотрудник отправился в командировку... на далекий остров. Как организовать удаленное рабочее место?</div>
               </div>
               <div class="scenario-card__lamp">
                 <picture>
@@ -311,28 +350,28 @@
       <section class="news">
         <div class="container">
           <h2 class="title news__title">Новости orion soft</h2>
-          <div class="news__cards"><a class="news-card" href="#" target="_blank"><span class="news-card__text">Использование киберполигона Ampire на базе zVirt</span>
+          <div class="news__cards"><a class="news-card" href="https://www.cnews.ru/redirect.php?41113969dcda1a47a5b+kinoland" target="_blank"><span class="news-card__text">Использование киберполигона Ampire на&nbsp;базе zVirt</span>
               <button class="button news-card__button">
                 <svg>
                   <use xlink:href="./images/sprite.svg#link-arrow"></use>
                 </svg>
-              </button></a><a class="news-card" href="#" target="_blank"><span class="news-card__text">Orion soft отчитался о результатах 2025 — выручка выросла на 36%</span>
+              </button></a><a class="news-card" href="#" target="_blank"><span class="news-card__text">Orion soft отчитался о&nbsp;результатах 2025 — выручка выросла на&nbsp;36%</span>
               <button class="button news-card__button">
                 <svg>
                   <use xlink:href="./images/sprite.svg#link-arrow"></use>
                 </svg>
-              </button></a><a class="news-card" href="#" target="_blank"><span class="news-card__text">Совместимость серверов Inferit RS (кластер «СФ Тех» ГК Softline) с системой zVirt</span>
+              </button></a><a class="news-card" href="https://www.cnews.ru/redirect.php?10249469dcda3f46a2c+kinoland" target="_blank"><span class="news-card__text">Совместимость серверов Inferit RS (кластер «СФ Тех» ГК Softline) с&nbsp;системой zVirt</span>
               <button class="button news-card__button">
                 <svg>
                   <use xlink:href="./images/sprite.svg#link-arrow"></use>
                 </svg>
-              </button></a><a class="news-card" href="#" target="_blank"><span class="news-card__text">Orion soft совместно с CICADA8 запустил программу регулярного анализа защищенности экосистемы ПО</span>
+              </button></a><a class="news-card" href="https://www.cnews.ru/redirect.php?11789469dcda54c4294+kinoland" target="_blank"><span class="news-card__text">Orion soft совместно с&nbsp;CICADA8 запустил программу регулярного анализа защищенности экосистемы ПО</span>
               <button class="button news-card__button">
                 <svg>
                   <use xlink:href="./images/sprite.svg#link-arrow"></use>
                 </svg>
               </button></a></div>
-          <div class="news__all"><a class="news__all-link" href="#" target="_blank">Все новости на сайте →</a></div>
+          <div class="news__all"><a class="news__all-link" href="https://www.cnews.ru/redirect.php?924660650c2bbd515dc+kinoland" target="_blank">Все новости на сайте →</a></div>
         </div>
       </section>
     </main>

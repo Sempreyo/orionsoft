@@ -6,6 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		autoRaf: true
 	});*/
 
+	const fadeIn = (element, duration = 0.7, delay = 0) => {
+		gsap.to(element, {
+			scrollTrigger: {
+				trigger: element,
+				start: "top 100%",
+				end: "bottom 10%"
+			},
+			opacity: 1,
+			duration,
+			delay,
+			ease: "power2.out"
+		});
+	}
+
 	const fadeUp = (element, duration = 0.7, delay = 0) => {
 		gsap.to(element, {
 			scrollTrigger: {
@@ -159,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const postersObserver = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					const posters = postersSection.querySelectorAll(".scenario-card__poster");
+					const posters = postersSection.querySelectorAll(".scenario-card");
 
 					posters.forEach((poster, index) => {
 						setTimeout(() => {
@@ -167,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						}, index * 200);
 					});
 
-					observer.unobserve(postersSection);
+					postersObserver.unobserve(postersSection);
 				}
 			});
 		});
@@ -175,28 +189,28 @@ document.addEventListener("DOMContentLoaded", () => {
 		postersObserver.observe(postersSection);
 	}
 
-	// Анимация появления кнопки
-	const scenarioButton = document.querySelector(".scenario__button");
+	// Анимация появления заголовка в сценариях
+	const scenarioTitle = document.querySelector(".scenario__title");
 
-	if (scenarioButton) {
-		const scenarioButtonObserver = new IntersectionObserver((entries, observer) => {
+	if (scenarioTitle) {
+		const scenarioTitleObserver = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					fadeUp(scenarioButton, 0.7);
+					fadeUp(scenarioTitle, 0.7);
 
-					observer.unobserve(scenarioButton);
+					scenarioTitleObserver.unobserve(scenarioTitle);
 				}
 			});
 		});
 
-		scenarioButtonObserver.observe(scenarioButton);
+		scenarioTitleObserver.observe(scenarioTitle);
 	}
 
 	// Анимация заголовков
 	const title = document.querySelector(".news__title");
 
 	if (title) {
-		/* Разделить строку на символы */
+		// Разделить строку на символы
 		const splitText = new SplitType(".news__title", {
 			types: "chars"
 		});
@@ -214,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 						}, 100 * index);
 					});
 
-					observer.unobserve(title);
+					titleObserver.unobserve(title);
 				}
 			});
 		});
@@ -237,11 +251,67 @@ document.addEventListener("DOMContentLoaded", () => {
 						}, index * 100);
 					});
 
-					observer.unobserve(newsCards);
+					newsObserver.unobserve(newsCards);
 				}
 			});
 		});
 
 		newsObserver.observe(newsCards);
+	}
+
+	// Анимация тултипа персонажа
+	const tooltip = document.querySelector(".hero__tooltip");
+
+	if (tooltip) {
+		// Разделить строку на символы
+		const splitText = new SplitType(".tooltip__text", {
+			types: "chars"
+		});
+
+		const tooltipObserver = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const chars = tooltip.querySelectorAll(".tooltip__text .char");
+					const button = tooltip.querySelectorAll(".tooltip__button");
+
+					fadeUp(tooltip, 0.7, 1.5);
+
+					chars.forEach((el, index) => {
+						setTimeout(() => {
+							el.style.opacity = 1;
+						}, 50 * index + 2000);
+					});
+
+					fadeIn(button, 0.3, 7);
+
+					tooltipObserver.unobserve(tooltip);
+				}
+			});
+		});
+
+		tooltipObserver.observe(tooltip);
+	}
+
+	// Вебинар
+	const webinar = document.querySelector(".webinar");
+
+	if (webinar) {
+		const close = webinar.querySelector(".webinar__close");
+
+		close.addEventListener("click", () => {
+			webinar.classList.add("hide");
+		});
+
+		const webinarObserver = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					fadeIn(webinar, 0.3, 2);
+
+					webinarObserver.unobserve(webinar);
+				}
+			});
+		});
+
+		webinarObserver.observe(webinar);
 	}
 });

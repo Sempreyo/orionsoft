@@ -3,7 +3,7 @@ extends ../layouts/default
 block vars
 	-
 		const page = {
-			title: 'Orionsoft | Detail'
+			title: 'Внедрение ML/AI | Orionsoft'
 		};
 
 block main
@@ -11,16 +11,17 @@ block main
 		.service__gradient
 		.service__poster
 			+picture('poster4', 'jpg', 'service__poster-image', '')
+			+button('Смотреть фильм', 'service__show', '#', 'arrow-right')
 		.container.service__container
 			.service__content
-				+button('К афише', 'button--gray service__button', '#', 'arrow-left')
+				+button('К афише', 'button--gray service__button', '/#scenario', 'arrow-left')
 				.service__rating
 					span 10,0
 					span Топ-5
-				+title('Начало. Внедрение ML/AI', 'service__title')
+				+title('Начало <br> <span>Внедрение ML/AI</span>', 'service__title')
 				.service__description.
 					В подсознании ИТ-директора появляется идея внедрения ИИ в процессы компании без закупки дополнительного оборудования.
-					Чтобы реализовать ее и не потеряться в лабиринте реальностей машинного обучения, к нему на помощь приходит команда экспертов Nova AI
+					Чтобы реализовать ее и не потеряться в лабиринте реальностей машинного обучения, к нему на помощь приходит команда экспертов Nova AI.
 				.service__roles-label В главных ролях:
 				.service__roles
 					.role
@@ -28,28 +29,41 @@ block main
 						span.role__note (Виртуализация)
 					.role
 						+icon('nova-ai', 'role__title')(width='40', height='18')
-						span.role__note (платформа для ИИ)
+						span.role__note (Платформа для ИИ)
 				.service__carousel.carousel
 					.carousel__slider.swiper
 						.swiper-wrapper
 							.carousel__slide.swiper-slide
 								+title('Материалы о фильме', 'carousel__title')
-								.carousel__spoiler Спойлер
+								+title('Спойлер', 'carousel__title carousel__title--small')
 								.carousel__text.
-									Эксперты успешно воплощают идею ИТ-директора в реальность с помощью kubernetes-платформы,
-									оптимизированной под задачи искусственного интеллекта.
+									Эксперты успешно воплотили идею ИТ-директора в реальность с помощью kubernetes-платформы,
+									оптимизированной под задачи искусственного интеллекта. Компания повысила утилизацию GPU в два
+									раза и решает ИИ-задачи на текущем железе.
 							.carousel__slide.swiper-slide
 								+title('Материалы о фильме', 'carousel__title')
-								.carousel__spoiler Отзыв крупной компании:
+								+title('Отзыв крупной государственной компании', 'carousel__title carousel__title--small')
 								.carousel__text.
-									«В результате внедрения платформы Nova AI мы смогли повысить утилизацию GPU до 80%. Консолидация
-									нагрузок и эффективное управление ресурсами помогли нам сэкономить 8 млн руб. в год.».
+									В результате внедрения платформы Nova AI мы смогли повысить утилизацию GPU в 2.9 раз — с 30% до 88%.
+									Нам не пришлось покупать оборудование и расширять команду, что сэкономило компании 120 млн руб.
+							.carousel__slide.carousel__slide--recommends.swiper-slide
+								+title('На основе ваших предпочтений:', 'carousel__title')
+								.carousel__recommends
+									a.recommend-card(href='/main/item/kii')
+										.recommend-card__bg
+											+picture('recommend3', 'jpg', 'recommend-card__bg-image', '')
+										.recommend-card__title Организация виртуальных рабочих мест
+									a.recommend-card(href='/main/item/workplaces')
+										.recommend-card__bg
+											+picture('recommend5', 'jpg', 'recommend-card__bg-image', '')
+										.recommend-card__title Оптимизация ресурсов ИТ-инфры
 						.carousel__pagination.swiper-pagination
 					.carousel__nav.swiper-nav
 						.swiper-btn-prev
 							+icon('arrow-left')(width='14', height='24')
 						.swiper-btn-next
 							+icon('arrow-right')(width='14', height='24')
+				+button('Смотреть фильм', 'service__show service__show--mobile', '#', 'arrow-right')
 				.service__nav
-					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '#', 'arrow-left')
-					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '#', 'arrow-right')
+					+button('Предыдущий фильм', 'button--outline service__nav-button service__nav-button--prev', '/main/item/kii', 'arrow-left')
+					+button('Следующий фильм', 'button--outline service__nav-button service__nav-button--next', '/main/item/workplaces', 'arrow-right')

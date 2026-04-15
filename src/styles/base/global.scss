@@ -172,11 +172,6 @@ ol {
 	gap: 10px;
 	pointer-events: none;
 
-	@include max(tl) {
-		justify-content: center;
-		gap: 50px;
-	}
-
 	.swiper-btn-prev,
 	.swiper-btn-next {
 		cursor: pointer;
@@ -208,10 +203,6 @@ ol {
 	top: unset !important;
 	bottom: 10px !important;
 	z-index: 12;
-
-	@include max(tl) {
-		display: none;
-	}
 
 	.swiper-pagination-bullet {
 		width: 9px;
